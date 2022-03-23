@@ -35,13 +35,11 @@ a{
 }
 .nav{
     width: 100%;
-    background-image: url('./../img/Shape-top.png');
-    background-repeat: no-repeat;
-    background-size: 105%;
-    background-position: 40% 100% ;
     display: flex;
     height: 170px;
     padding: 10px 50px;
+    position: relative;
+    z-index: 500;
 }
 .logo{
     flex-grow: 3;
@@ -120,7 +118,7 @@ a{
 .header_para{
     width: 500px;
 }
-.shade_buttom{
+.shade_buttom , .shade_top{
     position: absolute;
     background-image: url(./../img/Shape-bot.png);
     height: 100px;
@@ -129,6 +127,13 @@ a{
     left: 0;
     bottom: 0;
     transform: scaleX(2.4);
+}
+.shade_top{
+    top:0;
+    background-position: bottom;
+    bottom: initial;
+    background-image: url(./../img/Shape-top.png);
+    transform: scaleX(1.5);
 }
 /*Header End*/
 /* Start LETS GO section*/
@@ -143,7 +148,7 @@ a{
     opacity: 0.8;
     width: 600px;
     text-align: center;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 .articles{
     display: flex;
@@ -181,4 +186,278 @@ a{
 }
 .letsgo_btn:hover{
     background-color: var(--color1) ;
+}
+/* letsgo section end */
+/* discount promo start*/
+.dispr_container{
+    display: flex;
+}
+.dispr_img, .dispr_content{
+    width: 50%;
+    color: var(--w);
+}
+.dispr_container.dis .dispr_content{
+    background-color: var(--color2);
+}
+.dispr_container.promo .dispr_content{
+    background-color: var(--color1);
+}
+.dispr_content{
+    padding: 100px 35px 30px;
+}
+.dispr_content h3{
+    font-size: 35px;
+}
+.dispr_content p{
+    padding: 40px 0px;
+    width: 70%;
+}
+.dispr_btn{
+    border: none;
+    background-color: #af6d1d;
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    opacity: .7;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.6s;
+    color: var(--w);
+    text-transform: uppercase;
+}
+.dispr_btn:hover{
+    background-color: var(--color2) ;
+}
+.dispr_img img{
+    width: 100%;
+    display: block;
+}
+/* discounrd promo end */
+/* hiking start */
+.hiking{
+    position: relative;
+    background-color: var(--color2);
+    padding: 300px 0px;
+    overflow: hidden;
+    color: var(--w);
+    text-align: center;
+}
+.hiking_heading{
+    font-size: 50px;
+}
+.hiking_para{
+    padding: 30px 400px;
+}
+/*hiking end */
+/*explore start */
+.explore {
+    height: 100vh;
+    background-image: url(./../img/explore.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+.explore_container{
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    transform: translateY(-50%);
+}
+.explore_heading{
+    font-size: 80px;
+    text-transform: uppercase;
+    color: var(--color1);
+}
+.explore_heading.world{
+    color: var(--color2);
+}
+/* explore section end */
+/* quotes section start*/
+.quotes{
+    padding: 30px 0;
+}
+.quotes_flexy{
+    display: flex;
+    justify-content: space-between;
+}
+.quotes_item{
+    width: 30%;
+    padding: 30px 0;
+}
+.quotes_flexy h3{
+    font-size: 23px;
+    color: var(--color1);
+}
+.quotes_bot {
+    text-align: center;
+    padding: 50px 0;
+}
+.quotes_bot .fontawsome{
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.quotes_bot p{
+    margin-top: 50px;
+}
+.subscribe{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color1);
+    height: 800px;
+    padding: 300px;
+    text-align: center;
+}
+.subscribe_heading{
+    text-transform: capitalize;
+    font-size: 50px;
+    color: var(--w);
+    font-weight: bold;
+}
+.subscribe_para{
+    margin: 50px auto;
+    width: 500px;
+}
+.subscribe_input{
+    position: relative;
+    width: 400px;
+    height: 40px;
+    margin: 0 auto;
+}
+.subscribe_input input{
+    width: inherit;
+    height: inherit;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 20px;
+}
+.subscribe_btn{
+    border: 1px solid var(--color2);
+    background-color: var(--color2);
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top:0;
+    border-radius: 50px;
+    padding: 8px 20px;
+    color: var(--w);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* Footer */
+.footer {
+    background-color: var(--color2);
+    display: flex;
+    color: var(--w);
+    padding: 300px 100px 50px;
+    position: relative;
+    overflow: hidden;
+}
+.footer a{
+    color: var(--w);
+    transform: 0.7s;
+}
+.footer a :hover{
+    background-color: var(--color1);
+}
+.footer_1{
+    flex-grow: 1;
+}
+.footer_2{
+    flex-grow: 2;
+}
+.footer_2 p {
+    width: 400px;
+}
+.footer_2 h3{
+    padding-bottom: 20px;
+}
+.footer_2 ul{
+    display: flex;
+}
+.footer .footer_link{
+    padding: 5px 0;
+    display: inline-block;
+    margin: 5px;
+    background-color: var(--w);
+    border-radius: 50%;  
+    font-size: 25px;
+    color: var(--color2);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+/* Responsive */
+@media (max-width : 700px) {
+    .articles{
+        display: block;
+    }
+    .article{
+        width: 100%;
+    }
+    .navbar{
+        display: none;
+    }
+}
+@media (max-width : 950px) {
+    .navbar{
+        display: none;
+    }
+    .heading , .sub_heading{
+        font-size: 20px;
+    }
+    .heading_content{
+        padding: 50px;
+    }
+    .search_input{
+        outline: none;
+    }
+    .dispr_container{
+        display: block;
+    }
+    .dispr_img, .dispr_content {
+        width: 100%;
+    }
+    .hiking_para {
+        padding: 0px;
+    }
+    .quotes_flexy {
+        display: block;
+    }
+    .quotes_item {
+        width: 100%;
+    }
+    .subscribe{
+        padding: 150px 10px;
+    }
+    .header_para {
+        width: 200px;
+        padding-top: 20px;
+    }
+    .letsgo_subp{
+        width: 250px;
+    }
+    .explore_heading{
+        font-size: 30px;
+    }
+    .subscribe_input {
+        width: 350px;
+    }
+    .subscribe_para{
+        width: 300px;
+    }
+    .footer {
+        display: block;
+        padding: 200px 10px 50px;
+        text-align: center;
+    }
+    .footer_2 {
+        padding: 20px;
+    }
+    .footer_1 {
+        margin: 20px;
+    }
 }
