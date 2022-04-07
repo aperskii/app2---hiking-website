@@ -24,6 +24,21 @@ a{
     text-decoration: none;
 }
 /*Header start*/
+.scrollTop{
+    bottom: 40px;
+    right: 40px;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 99999999;
+    display: none;
+}
+.scrollTop.active{
+    display: block;
+}
+.scrollTop i{
+    font-size: 50px;
+    color: var(--color1);
+}
 .header{
     height: 100vh;
     background-image: url('./../img/bg.png');
@@ -52,6 +67,19 @@ a{
     display: flex;
     flex-grow: 3;
     flex-direction: row-reverse;
+}
+.navbar.mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: beige;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .nav_item{
     padding: 10px;
@@ -87,6 +115,20 @@ a{
     right: 10%;
     top: 50%;
     transform: translateY(-50%);
+}
+.bars_mobile{
+    display: none;
+    cursor: pointer;
+    z-index: 9999999;
+}
+.bars_icon{
+    padding: 10px;
+    margin: 10px;
+    pointer-events: none;
+}
+.bars_icon i{
+    font-size: 30px;
+    pointer-events: none;
 }
 .heading , .sub_heading{
     font-size: 80px;
@@ -459,5 +501,14 @@ a{
     }
     .footer_1 {
         margin: 20px;
+    }
+}
+
+@media (max-width : 950px) {
+    .navbar{
+        display: none;
+    }
+    .bars_mobile{
+        display: block;
     }
 }
